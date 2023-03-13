@@ -1,0 +1,18 @@
+{
+  "name": "@3allet/monorepo",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "deploy": "git checkout main&&git merge --no-ff development&&git add -A&&git push&&git push --tags&&git checkout development",
+    "build": "turbo run build",
+    "start": "turbo run dev",
+    "lint": "turbo run lint"
+  },
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "devDependencies": {
+    "turbo": "latest"
+  }
+}
